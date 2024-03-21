@@ -1,0 +1,114 @@
+
+main.elf:     formato del fichero elf64-littleaarch64
+
+
+Desensamblado de la sección .text:
+
+0000000000000000 <infloop-0x20>:
+   0:	58000120 	ldr	x0, 24 <f>
+   4:	58000141 	ldr	x1, 2c <g>
+   8:	58000162 	ldr	x2, 34 <h>
+   c:	58000183 	ldr	x3, 3c <i>
+  10:	580001a4 	ldr	x4, 44 <j>
+  14:	8b020020 	add	x0, x1, x2
+  18:	8b030000 	add	x0, x0, x3
+  1c:	8b040000 	add	x0, x0, x4
+
+0000000000000020 <infloop>:
+  20:	14000000 	b	20 <infloop>
+
+Desensamblado de la sección .data:
+
+0000000000000024 <f>:
+  24:	00000001 	udf	#1
+  28:	00000000 	udf	#0
+
+000000000000002c <g>:
+  2c:	00000002 	udf	#2
+  30:	00000000 	udf	#0
+
+0000000000000034 <h>:
+  34:	00000003 	udf	#3
+  38:	00000000 	udf	#0
+
+000000000000003c <i>:
+  3c:	00000004 	udf	#4
+  40:	00000000 	udf	#0
+
+0000000000000044 <j>:
+  44:	00000005 	udf	#5
+  48:	00000000 	udf	#0
+
+Desensamblado de la sección .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	0000003e 	udf	#62
+   4:	001d0003 	.inst	0x001d0003 ; undefined
+   8:	01040000 	.inst	0x01040000 ; undefined
+   c:	000d0efb 	.inst	0x000d0efb ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+  14:	01000000 	.inst	0x01000000 ; undefined
+  18:	00010000 	.inst	0x00010000 ; undefined
+  1c:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+  20:	0000732e 	udf	#29486
+  24:	00000000 	udf	#0
+  28:	00000209 	udf	#521
+  2c:	00000000 	udf	#0
+  30:	0c030000 	.inst	0x0c030000 ; undefined
+  34:	21212101 	.inst	0x21212101 ; undefined
+  38:	21212321 	.inst	0x21212321 ; undefined
+  3c:	00010222 	.inst	0x00010222 ; undefined
+  40:	La dirección 0x0000000000000040 está fuera de los límites.
+
+
+Desensamblado de la sección .debug_info:
+
+0000000000000000 <.debug_info>:
+   0:	0000002a 	udf	#42
+   4:	00000002 	udf	#2
+   8:	01080000 	.inst	0x01080000 ; undefined
+	...
+  18:	00000024 	udf	#36
+	...
+  24:	00000007 	udf	#7
+  28:	0000002a 	udf	#42
+  2c:	La dirección 0x000000000000002c está fuera de los límites.
+
+
+Desensamblado de la sección .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	10001101 	adr	x1, 220 <j+0x1dc>
+   4:	12011106 	and	w6, w8, #0x8000000f
+   8:	1b0e0301 	madd	w1, w24, w14, w0
+   c:	130e250e 	sbfiz	w14, w8, #18, #10
+  10:	00000005 	udf	#5
+
+Desensamblado de la sección .debug_aranges:
+
+0000000000000000 <.debug_aranges>:
+   0:	0000002c 	udf	#44
+   4:	00000002 	udf	#2
+   8:	00080000 	.inst	0x00080000 ; undefined
+	...
+  18:	00000024 	udf	#36
+	...
+
+Desensamblado de la sección .debug_str:
+
+0000000000000000 <.debug_str>:
+   0:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+   4:	2f00732e 	.inst	0x2f00732e ; undefined
+   8:	656d6f68 	fnmls	z8.h, p3/m, z27.h, z13.h
+   c:	6e65622f 	rsubhn2	v15.8h, v17.4s, v5.4s
+  10:	442f616a 	.inst	0x442f616a ; undefined
+  14:	6d75636f 	ldp	d15, d24, [x27, #-176]
+  18:	6f746e65 	.inst	0x6f746e65 ; undefined
+  1c:	52412f73 	.inst	0x52412f73 ; undefined
+  20:	32495551 	.inst	0x32495551 ; undefined
+  24:	6d65712f 	ldp	d15, d28, [x9, #-432]
+  28:	4e470075 	.inst	0x4e470075 ; undefined
+  2c:	53412055 	.inst	0x53412055 ; undefined
+  30:	332e3220 	.inst	0x332e3220 ; undefined
+  34:	La dirección 0x0000000000000034 está fuera de los límites.
+

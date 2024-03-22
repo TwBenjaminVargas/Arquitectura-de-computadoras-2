@@ -1,4 +1,4 @@
-//      EJERCICIO 3.2
+//      EJERCICIO 3.1
 
 
 .data
@@ -17,12 +17,13 @@ j: .dword 5
         LDR     X4, j
 
 /*CODE LEGV8
-        ADDI X0,X0,#5 //f=f+5
-        SUB X0,X1,X0 // f=g-f = g + (-f-5)
+	ADD X0,X1,X0 //f=g+f
+	SUB X0,XZR,X0 //f=-f;
 */
 //CODE ARMv8
-        ADD X0,X0,#5
-        SUB X0,X1,X0
+        ADD X0,X1,X0
+	SUB X0,XZR,X0
 infloop:
         B infloop
+
 

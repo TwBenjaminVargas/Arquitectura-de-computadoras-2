@@ -17,12 +17,12 @@ j: .dword 5
         LDR     X4, j
 
 /*CODE LEGV8
-        ADDI X0,X0,#5 //f=f+5
-        SUB X0,X1,X0 // f=g-f = g + (-f-5)
+	ADDI X0,X0,#5 //f=f+5
+	SUB X0,X1,X0 // f=g-f = g + (-f-5)
 */
 //CODE ARMv8
-        ADD X0,X0,#5
-        SUB X0,X1,X0
+	ADD X0,X0,#5
+	SUB X0,X1,X0
 infloop:
         B infloop
 
